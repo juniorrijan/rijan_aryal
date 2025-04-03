@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.mamu input{
+    width: 350px;
+    padding: 4px;
+}
+a{
+    text-decoration: none;
+}
+body{
+    margin: 0px;
+}
+header{
+            font-family: cursive;
+            padding: 7.6px 7px;
+            background-color: #004080; 
+        }
+
+        .nav-list{
+            display: flex;
+        }
+
+        .nav-list li{
+            list-style-type: none;
+           margin: 10px 15px;
+           text-shadow: 1px 1px;
+           font-size: larger;
+        }
+
+        .nav-list a{
+            text-decoration: none;
+            color: white;
+        }
+
+        .nav-list a:hover{
+            transition: 0.99s ease all;
+            cursor: pointer;
+            color: blue;
+         }
+         @keyframes colorChange {
+      0% { background-color: white; }
+     
+      20% { background-color: greenyellow; }
+    
+    }
+
+    body {
+      animation: colorChange 5s infinite alternate;
+   
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index1.html">HOME</a></li>
+                <li><a href="#">LOCATION</a></li>
+                <li><a href="#">FORM</a></li>
+                <li><a href="#">OFFERS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h2 style="font-family: sans-serif; text-align: center; text-decoration: underline;">CONTACT-US</h2>
+    <p style="font-family: sans-serif; text-align: center; text-decoration: underline;">"PLEASE FILL THE FORM IN DESCENT MANNER"</p> <br><hr>
+    <br>  
+<div style="margin: -15px 20px;">
+    <h3 style="font-family: cursive; text-decoration: underline; color: blue;">Full Name:</h3>
+    <div style="display: flex; gap: 15px; align-items: center;">
+       First Name: <input type="text" style="padding: 4px;">  Last Name: <input type="text" style="padding: 4px;">
+    </div> <br>
+    <h3 style="font-family: cursive; text-decoration: underline; color: blue;">Email:</h3>
+    <div class="mamu">
+        <input type="text" name="" id="" style="padding: 4px;">
+    </div>
+    <p>example1@gmail.com</p>
+    <h3 style="font-family: cursive ; text-decoration: underline; color: blue;">Message:</h3>
+    <textarea name="" id="" cols="47px" rows="7px"></textarea> <br> <br>
+    <button type="submit" style="width: 100px; color: red; background-color:greenyellow; cursor: pointer; transition: 0.9s ease all; text-decoration: none; list-style-type: none; "><a href="#">Submit</a></button>
+</div>
+</body>
+</html>
