@@ -36,101 +36,141 @@
             cursor: pointer;
             color: cyan;
         }
-  .buttons{
-    margin-left: 510px;
-    padding: 10px;
-  }
 
-  .buttons button{
-    padding: 2px 5px;
-    font-family: cursive;
-    text-shadow: 1px 1px;
-    background-color: yellow;
-}
+        .buttons{
+            margin-left: 510px;
+            padding: 10px;
+        }
 
-main{
-    text-align: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: 100vh; /* Change from min-height to height */
-    bottom: 0px;
-    position: relative;
-    padding: 15px;
-}
+        .buttons button{
+            padding: 2px 5px;
+            font-family: cursive;
+            text-shadow: 1px 1px;
+            background-color: yellow;
+        }
 
-section{
-    background-color: white ;
-    border-radius: 10px;
-    border: 4px solid none;
-    box-shadow: 7px 7px 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-}
+        main{
+            text-align: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            bottom: 0px;
+            position: relative;
+            padding: 15px;
+        }
 
-footer {
-    position: fixed; /* Change from absolute to fixed */
-    bottom: 0;
-    width: 100%;
-    padding: 10px 0px;
-   background-color: black;
-   color: red;
-   text-align: center;
-}
+        section{
+            background-color: white ;
+            border-radius: 10px;
+            border: 4px solid none;
+            box-shadow: 7px 7px 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
 
-.cart-container {
-  display: flex;
-  gap: 20px; 
-}
-        
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding: 10px 0px;
+            background-color: black;
+            color: red;
+            text-align: center;
+        }
+
+        .cart-container {
+            display: flex;
+            gap: 20px; 
+        }
+
+        /* Dark Mode Styles */
+        .dark-mode {
+            background-color: #121212;
+            color: white;
+        }
+
+        .dark-mode header {
+            background-color: #333;
+        }
+
+        .dark-mode .nav-list a {
+            color: cyan;
+        }
+
+        .dark-mode section {
+            background-color: #1e1e1e;
+            color: white;
+        }
+
+        .dark-mode footer {
+            background-color: #333;
+            color: white;
+        }
+
+        /* Hover effect and background color change animation */
+        @keyframes colorChange {
+            0% { background-color: red; }
+            25% { background-color: linear-gradient(120deg, #89f7fe, #66a6ff); }
+            50% { background-color: yellow; }
+            75% { background-color: yellow; }
+            100% { background-color: cyan; }
+        }
+
+        body {
+            animation: colorChange 2s infinite alternate;
+        }
+
+        img a:hover {
+            cursor: pointer;
+            transition: 0.9s ease all;
+            color: #66a6ff;
+            transform: scale(1.1);
+            filter: brightness(1.9) contrast(1.3) saturate(1.5) drop-shadow(10px 10px 20px rgba(0,0,0,0.7));
+        }
+
+        .rijan img{
+            margin: 1px;
+            object-fit: cover;
+            border-radius: 3000px;
+        }
+
+        /* Image hover rotation */
+        .div{
+            -webkit-transition: height 3s, width 3s, -webkit-transform 2s;
+        }
+
+        .div:hover{
+            -webkit-transform: rotate(360deg);
+        }
+
+        .div1{
+            -webkit-transition: height 3s, width 3s, -webkit-transform 2s;
+        }
+
+        .div1:hover{
+            -webkit-transform: rotate(360deg);
+        }
+
+        /* Dark Mode Toggle Button */
+        .dark-mode-btn {
+            position: fixed;
+            margin: 97px 10px;
+            top: 10px;
+            right: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 17px;
+        }
+
+        .dark-mode-btn:hover {
+            background-color: #650505;
+        }
+
     </style>
-   <style>
-    @keyframes colorChange {
-      0% { background-color: red; }
-      25% { background-color: linear-gradient(120deg, #89f7fe, #66a6ff); }
-      50% { background-color: yellow; }
-      75% { background-color: yellow; }
-      100% { background-color: cyan; }
-    }
-
-    body {
-      animation: colorChange 2s infinite alternate;
-    }
-
-   img a:hover{
-    cursor: pointer;
-    transition: 0.9s ease all ;
-/* background-color: red; */
-/* cursor: pointer; */
-color: #66a6ff;
-transform: scale(1.1);
-filter: brightness(1.9) contrast(1.3) saturate(1.5) drop-shadow(10);
-   }
-
-    .rijan img{
-        margin: 1px;   
-        object-fit: cover;
-        border-radius: 3000px;
-    }
-
-    .div{
-        -webkit-transition: height 3s, width 3s, -webkit-transform 2s;
-    }
-
-    .div:hover{
-        -webkit-transform: rotate(360deg);
-    }
-
-    .div1{
-        -webkit-transition: height 3s, width 3s, -webkit-transform 2s;
-    }
-
-    .div1:hover{
-        -webkit-transform: rotate(360deg);
-    }
-
-
-  </style>
 </head>
 <body>
     <header>
@@ -147,37 +187,48 @@ filter: brightness(1.9) contrast(1.3) saturate(1.5) drop-shadow(10);
                 <button>
                     <a href="signin.html">SIGN-UP</a>
                 </button>
-                    </div>
+                </div>
 
-                  <div style="display: flex; align-items: center; justify-content: flex-end;">
-                    <input  style="padding: 4px; margin: 5px 29px; border: 5px solid white; border-radius: 5px;"
+                <div style="display: flex; align-items: center; justify-content: flex-end;">
+                    <input style="padding: 4px; margin: 5px 29px; border: 5px solid white; border-radius: 5px;"
                     placeholder="Search...."
                     type="text" name="" id="" required>
-                  </div>
+                </div>
             </ul>
         </nav>
     </header>
+
     <main>
         <section>   
             <h2>Welcome to My Portfolio</h2>
-            <p>Hello! I am Rijan Aryal, a passionate web developer. <br>Here are some of my projects and click me to know my skills project and so on: </p>
+            <p>Hello! I am Rijan Aryal, a passionate web developer. <br>Here are some of my projects and click my photo to know my about myself: </p>
         </section>
-        
-            <div class="cart-container">
-                <div class="div">
-                    <section>
-                     <div class="rijan">
-             <a href="about.html">                      
-     <img src="https://scontent.fktm3-1.fna.fbcdn.net/v/t39.30808-6/475728418_1343953129937717_8879978727475793515_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=2VMyXVfKW74Q7kNvgFHrRxp&_nc_oc=AdlaEka7V72V66fnboXYFKaJJfMVWNl6fzGcYKqibTsnagfL0OJTKHMbWnoPnglg6a6I0LTHDbvDa-nsbGxrJt9F&_nc_zt=23&_nc_ht=scontent.fktm3-1.fna&_nc_gid=cmGz1ZIfa_jyvZEXZkolwQ&oh=00_AYH4fh1HA38k-qgMZ0J-g1S0vze7yGsUxGAYCdsazBgldQ&oe=67F3A9BE" alt="" width="400px" height="287px">
-                       </a>                             
 
-</div>                    </section>
-                </div>
+        <div class="cart-container">
+            <div class="div">
+                <section>
+                    <div class="rijan">
+                        <a href="a.html">                      
+                            <img src="https://scontent.fktm3-1.fna.fbcdn.net/v/t39.30808-6/475728418_1343953129937717_8879978727475793515_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=2VMyXVfKW74Q7kNvgFHrRxp&_nc_oc=AdlaEka7V72V66fnboXYFKaJJfMVWNl6fzGcYKqibTsnagfL0OJTKHMbWnoPnglg6a6I0LTHDbvDa-nsbGxrJt9F&_nc_zt=23&_nc_ht=scontent.fktm3-1.fna&_nc_gid=cmGz1ZIfa_jyvZEXZkolwQ&oh=00_AYH4fh1HA38k-qgMZ0J-g1S0vze7yGsUxGAYCdsazBgldQ&oe=67F3A9BE" alt="" width="400px" height="287px">
+                        </a>                             
+                    </div>                    
+                </section>
             </div>
-        
+        </div>
     </main>
+
     <footer>
         <p style="font-family: Arial, sans-serif; color: red; text-shadow: 2px 2px 5px black;">© 2024 Rijan mandu of Main System</p>
     </footer>
+
+    <!-- Dark Mode Toggle Button -->
+    <button class="dark-mode-btn" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+
+    <!-- JavaScript for Dark Mode -->
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
 </body>
 </html>
